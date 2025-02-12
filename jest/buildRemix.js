@@ -4,7 +4,7 @@ import { spawn } from "cross-spawn";
 function buildRemix(dir) {
   return new Promise((accept, reject) => {
     spawn("pnpm", ["build"], {
-      stdio: "inherit",
+      stdio: undefined,
       cwd: dir,
     })
       .on("error", reject)
